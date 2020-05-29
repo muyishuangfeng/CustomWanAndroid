@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingStart="@dimen/dp_48"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingEnd="@dimen/dp_48"
+    android:paddingBottom="@dimen/dp_24">
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/pgb_fragment"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="@dimen/dp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_loading"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pgb_fragment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
