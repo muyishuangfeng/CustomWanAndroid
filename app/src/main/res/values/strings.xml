@@ -31,4 +31,24 @@
     <string name="discovery">发现</string>
     <string name="system">体系</string>
     <string name="navigation">导航</string>
+    <string name="text_write_storage">读写权限</string>
+    <string name="permission_get">标题</string>
+    <string name="permission_desc">描述</string>
+    <string name="press_again_to_exit">再按一次退出</string>
+    <string name="search_hint">搜过关键字以空格隔开</string>
+    <string name="text_hot">热门</string>
+    <string name="text_last">最新</string>
+    <string name="text_ground">广场</string>
+    <string name="text_project">项目</string>
+    <string name="text_public_no">公众号</string>
+    <string name="login_register">登录/注册</string>
+    <string name="my_points">我的积分</string>
+    <string name="my_points_rank">积分排行</string>
+    <string name="my_share">我的分享</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="my_view_history">浏览历史</string>
+    <string name="my_open_source">开源许可</string>
+    <string name="my_about_author">关于作者</string>
+    <string name="my_system_setting">系统设置</string>
+    <string name="text_default">默认</string>
 </resources>

@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 
 abstract class BaseFragment<V : ViewDataBinding> : Fragment() {
 
-    private lateinit var mBinding: V
+    protected lateinit var mBinding: V
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,5 +37,7 @@ abstract class BaseFragment<V : ViewDataBinding> : Fragment() {
     /**
      * 加载控件
      */
-    open fun initBinding(v: V) {}
+    open fun initBinding(mBinding: V) {
+        this.mBinding = mBinding
+    }
 }

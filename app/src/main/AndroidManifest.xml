@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".common.APP"
@@ -13,6 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".widget.activity.OpenSourceActivity"></activity>
+        <activity android:name=".widget.activity.SettingActivity" />
+        <activity android:name=".widget.activity.PointRankActivity" />
+        <activity android:name=".widget.activity.MinePointActivity" />
+        <activity android:name=".widget.activity.HistoryActivity" />
+        <activity android:name=".widget.activity.AboutActivity" />
+        <activity android:name=".widget.activity.MineCollectActivity" />
+        <activity android:name=".widget.activity.ShareActivity" />
+        <activity android:name=".widget.activity.SearchActivity" />
         <activity android:name=".widget.activity.MainActivity" />
         <activity android:name=".widget.activity.RegisterActivity" />
         <activity android:name=".widget.activity.LoginActivity" />

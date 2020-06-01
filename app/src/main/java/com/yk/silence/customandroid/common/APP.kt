@@ -8,6 +8,8 @@ import com.yk.silence.customandroid.util.ProcessHelper
 
 class APP : Application() {
 
+
+
     companion object {
         lateinit var sInstance: APP
     }
@@ -26,6 +28,7 @@ class APP : Application() {
     private fun init() {
         registerActivityCallbacks()
         setDayOrNightModel()
+
     }
 
     /**

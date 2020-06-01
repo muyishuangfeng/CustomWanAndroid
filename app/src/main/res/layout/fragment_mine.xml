@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ryt_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/mine"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_16" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@+id/ryt_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="64dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cst_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_16">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_mine_avatar"
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:src="@drawable/ic_avatar_black_96dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_mine_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:text="@string/login_register"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_mine_avatar"
+                        app:layout_constraintStart_toEndOf="@+id/img_mine_avatar"
+                        app:layout_constraintTop_toTopOf="@+id/img_mine_avatar" />
+
+                    <TextView
+                        android:id="@+id/txt_nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_14"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/img_mine_avatar"
+                        app:layout_constraintTop_toTopOf="@+id/img_mine_avatar"
+                        android:text="@string/text_default" />
+
+                    <TextView
+                        android:id="@+id/txt_mine_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/txt_nick_name"
+                        app:layout_constraintStart_toEndOf="@id/img_mine_avatar"
+                        android:text="@string/text_default" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chevron_right_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_my_integral" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_points"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_point_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_graphic_eq_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_points_rank"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_add_circle_outline_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_share"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_collect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_star_border_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_collect"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_history_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_view_history"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_open_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_github" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_open_source"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_info_outline_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_about_author"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:id="@+id/lyt_mine_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_12">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@drawable/ic_settings_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:text="@string/my_system_setting"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

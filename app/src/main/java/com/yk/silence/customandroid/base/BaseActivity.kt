@@ -1,6 +1,7 @@
 package com.yk.silence.customandroid.base
 
 import android.os.Bundle
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -20,16 +21,18 @@ import com.yk.silence.customandroid.ui.ProgressDialogFragment
  * 2.无网络
  * 3.失败，点击重试
  */
-abstract class BaseActivity<V: ViewDataBinding> : AppCompatActivity() {
+abstract class BaseActivity<V : ViewDataBinding> : AppCompatActivity() {
 
     private lateinit var mDialogFragment: ProgressDialogFragment
+    protected lateinit var mBinding:V
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         val mBinding: V = DataBindingUtil.setContentView(this, getLayoutID())
         initBinding(mBinding)
+        initSaveState(mBinding, savedInstanceState)
     }
-
 
 
     /**
@@ -37,8 +40,12 @@ abstract class BaseActivity<V: ViewDataBinding> : AppCompatActivity() {
      */
     open fun getLayoutID() = 0
 
-    open fun initBinding(mBinding: V){
+    open fun initBinding(mBinding: V) {
+        this.mBinding=mBinding
+    }
 
+    open fun initSaveState(mBinding: V, savedInstanceState: Bundle?) {
+        this.mBinding=mBinding
     }
 
     /**
