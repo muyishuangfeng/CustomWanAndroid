@@ -18,9 +18,9 @@
             android:id="@+id/bnv_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            app:itemIconTint="@color/colorGray"
-            app:itemTextColor="@color/colorGray"
+            android:background="@drawable/ripple_item_select"
+            app:itemIconTint="@color/selector_bottom_navigation_item"
+            app:itemTextColor="@color/selector_bottom_navigation_item"
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/main_menu" />

@@ -90,7 +90,7 @@ class MineFragment : BaseVMFragment<MineViewModel, FragmentMineBinding>() {
                 }
             })
         }
-        EventBus.post(Constants.USER_COLLECT_UPDATED, viewLifecycleOwner)
+        EventBus.post(Constants.USER_LOGIN_STATE_CHANGED, viewLifecycleOwner)
     }
 
 

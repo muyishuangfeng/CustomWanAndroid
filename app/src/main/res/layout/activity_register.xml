@@ -10,6 +10,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_48"
+            android:background="@color/bgColorPrimary"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -53,7 +54,7 @@
                 android:layout_marginTop="@dimen/dp_8"
                 android:fontFamily="serif"
                 android:text="@string/app_name"
-                android:textColor="@color/colorBlue"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="@dimen/sp_20" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -73,7 +74,7 @@
                     android:maxLength="20"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorBlack"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="@dimen/sp_14" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,9 +86,9 @@
                 android:layout_marginTop="@dimen/dp_16"
                 android:layout_marginEnd="@dimen/dp_16"
                 android:hint="@string/text_password"
-                android:textColorHint="@color/colorGray"
+                android:textColorHint="@color/textColorPrimary"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorBlack">
+                app:passwordToggleTint="@color/textColorThird">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_password"
@@ -97,7 +98,7 @@
                     android:maxLength="20"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorBlack"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="@dimen/sp_14" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +111,7 @@
                 android:layout_marginEnd="@dimen/dp_16"
                 android:hint="@string/text_confirm_password"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorBlack">
+                app:passwordToggleTint="@color/textColorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt_confirm_password"
@@ -121,7 +122,7 @@
                     android:maxLength="20"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorBlack"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="@dimen/sp_14" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,7 +134,8 @@
                 android:layout_marginTop="@dimen/dp_48"
                 android:layout_marginEnd="@dimen/dp_16"
                 android:text="@string/text_register"
-                android:textColor="@color/colorBlack"
+                android:background="@drawable/shape_bg_btn"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="@dimen/sp_14" />
         </LinearLayout>
 

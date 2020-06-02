@@ -41,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/search_hint"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/textColorPrimary"
                         android:textSize="@dimen/sp_14" />
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
@@ -54,8 +54,8 @@
                 app:tabGravity="fill"
                 app:tabIndicatorColor="@color/colorWhite"
                 app:tabMode="fixed"
-                app:tabSelectedTextColor="@color/colorBlack"
-                app:tabTextColor="@color/colorWhite" />
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabTextColor="@color/textColorThird" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager.widget.ViewPager

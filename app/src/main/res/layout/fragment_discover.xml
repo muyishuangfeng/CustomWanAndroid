@@ -1,8 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ryt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/bgColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/discovery"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_discover_add"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="?actionBarItemBackground"
+                android:padding="@dimen/dp_11"
+                android:src="@drawable/ic_add_black_24dp"
+                android:tint="@color/textColorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_discover_search"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_3"
+                android:background="?actionBarItemBackground"
+                android:padding="@dimen/dp_13"
+                android:src="@drawable/ic_search_black_24dp"
+                android:tint="@color/textColorPrimary" />
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_discover"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ryt_title">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nsv_discover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bgColorPrimary">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner_discover"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            app:banner_default_image="@drawable/shape_bg_image_default"
+                            app:delay_time="5000"
+                            app:image_scale_type="fit_xy"
+                            app:is_auto_play="true"
+                            app:layout_constraintDimensionRatio="h,16:7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:scroll_time="1500" />
+
+                        <TextView
+                            android:id="@+id/txt_hot_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/everyone_search"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/sp_14"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/banner_discover"
+                            tools:visibility="visible" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rlv_discover"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_hot_title"
+                            app:spanCount="3"
+                            tools:listitem="@layout/item_hot_word" />
+
+                        <TextView
+                            android:id="@+id/txt_discover_website"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/frequently_website"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/sp_14"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/rlv_discover"
+                            tools:visibility="visible" />
+
+                        <com.zhy.view.flowlayout.TagFlowLayout
+                            android:id="@+id/tfl_discover"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_discover_website" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <include
+                    android:id="@+id/reloadView"
+                    layout="@layout/include_reload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,9 +16,15 @@ object SettingsStore {
     //日夜间模式设置
     private const val KEY_NIGHT_MODE = "key_night_mode"
 
+    /**
+     * 设置字体大小
+     */
     fun setWebTextZoom(textZoom: Int) =
         SpHelper.putSpValue(SP_SETTINGS, APP.sInstance, KEY_WEB_TEXT_ZOOM, textZoom)
 
+    /**
+     * 获取字体大小
+     */
     fun getWebTextZoom() =
         SpHelper.getSpValue(SP_SETTINGS, APP.sInstance, KEY_WEB_TEXT_ZOOM, DEFAULT_WEB_TEXT_ZOOM)
 
