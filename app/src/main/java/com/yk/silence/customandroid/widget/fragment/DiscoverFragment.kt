@@ -12,9 +12,11 @@ import com.yk.silence.customandroid.base.BaseVMFragment
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.databinding.FragmentDiscoverBinding
 import com.yk.silence.customandroid.impl.ScrollToTop
+import com.yk.silence.customandroid.model.Article
 import com.yk.silence.customandroid.model.BannerModel
 import com.yk.silence.customandroid.ui.BannerImageLoader
 import com.yk.silence.customandroid.viewmodel.discover.DiscoverViewModel
+import com.yk.silence.customandroid.widget.activity.DetailActivity
 import com.yk.silence.customandroid.widget.activity.MainActivity
 import com.yk.silence.customandroid.widget.activity.SearchActivity
 import com.yk.silence.customandroid.widget.activity.ShareActivity
@@ -93,6 +95,16 @@ class DiscoverFragment : BaseVMFragment<DiscoverViewModel, FragmentDiscoverBindi
                 mBinding.tflDiscover.setOnTagClickListener { _, position, _ ->
                     val frequently = it[position]
                     //TODO:跳转到详情页
+                    ActivityManager.start(
+                        DetailActivity::class.java,
+                        mapOf(
+                            DetailActivity.PARAM_ARTICLE to Article(
+                                title = frequently.name,
+                                link = frequently.link
+                            )
+                        )
+                    )
+
                     false
                 }
                 mBinding.txtDiscoverWebsite.isVisible = it.isEmpty()
@@ -136,6 +148,15 @@ class DiscoverFragment : BaseVMFragment<DiscoverViewModel, FragmentDiscoverBindi
             setOnBannerListener {
                 val banner = banners[it]
                 //TODO:跳转到详情页
+                ActivityManager.start(
+                    DetailActivity::class.java,
+                    mapOf(
+                        DetailActivity.PARAM_ARTICLE to Article(
+                            title = banner.title,
+                            link = banner.url
+                        )
+                    )
+                )
             }
 
         }

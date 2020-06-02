@@ -3,7 +3,7 @@ package com.yk.silence.customandroid.viewmodel.user
 import com.google.gson.Gson
 import com.yk.silence.customandroid.common.APP
 import com.yk.silence.customandroid.model.UserModel
-import com.yk.silence.customandroid.util.SpHelper
+import com.yk.silence.customandroid.ext.SpHelper
 
 /**
  * 处理用户数据

@@ -10,7 +10,7 @@ import com.yk.silence.customandroid.R
 import com.yk.silence.customandroid.base.BaseActivity
 import com.yk.silence.customandroid.databinding.ActivityMainBinding
 import com.yk.silence.customandroid.impl.ScrollToTop
-import com.yk.silence.customandroid.util.showToast
+import com.yk.silence.customandroid.ext.showToast
 import com.yk.silence.customandroid.widget.fragment.*
 
 

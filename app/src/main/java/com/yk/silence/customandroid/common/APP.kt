@@ -1,7 +1,7 @@
 package com.yk.silence.customandroid.common
 
 import android.app.Application
-import com.yk.silence.customandroid.ext.SettingsStore
+import com.yk.silence.customandroid.util.SettingsStore
 import com.yk.silence.customandroid.util.DayOrNightUtil
 import com.yk.silence.customandroid.util.ProcessHelper
 

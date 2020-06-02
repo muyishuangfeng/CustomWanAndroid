@@ -1,17 +1,14 @@
 package com.yk.silence.customandroid.widget.activity
 
 import android.annotation.SuppressLint
-import android.widget.CompoundButton
-import androidx.constraintlayout.solver.Cache
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.yk.silence.customandroid.BuildConfig
 import com.yk.silence.customandroid.R
-import com.yk.silence.customandroid.base.BaseActivity
 import com.yk.silence.customandroid.base.BaseVMActivity
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.databinding.ActivitySettingBinding
-import com.yk.silence.customandroid.ext.SettingsStore
+import com.yk.silence.customandroid.util.SettingsStore
 import com.yk.silence.customandroid.ui.dialog.CommonDialog
 import com.yk.silence.customandroid.ui.dialog.DialogFragmentHelper
 import com.yk.silence.customandroid.ui.dialog.FontSizeDialog

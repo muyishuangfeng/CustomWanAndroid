@@ -1,6 +1,6 @@
 @file:Suppress("UNCHECKED_CAST")
 
-package com.yk.silence.customandroid.util
+package com.yk.silence.customandroid.ext
 
 import android.content.Context
 

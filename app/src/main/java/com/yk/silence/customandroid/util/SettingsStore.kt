@@ -1,7 +1,7 @@
-package com.yk.silence.customandroid.ext
+package com.yk.silence.customandroid.util
 
 import com.yk.silence.customandroid.common.APP
-import com.yk.silence.customandroid.util.SpHelper
+import com.yk.silence.customandroid.ext.SpHelper
 
 /**
  * 设置中心
@@ -20,24 +20,34 @@ object SettingsStore {
      * 设置字体大小
      */
     fun setWebTextZoom(textZoom: Int) =
-        SpHelper.putSpValue(SP_SETTINGS, APP.sInstance, KEY_WEB_TEXT_ZOOM, textZoom)
+        SpHelper.putSpValue(
+            SP_SETTINGS, APP.sInstance,
+            KEY_WEB_TEXT_ZOOM, textZoom)
 
     /**
      * 获取字体大小
      */
     fun getWebTextZoom() =
-        SpHelper.getSpValue(SP_SETTINGS, APP.sInstance, KEY_WEB_TEXT_ZOOM, DEFAULT_WEB_TEXT_ZOOM)
+        SpHelper.getSpValue(
+            SP_SETTINGS, APP.sInstance,
+            KEY_WEB_TEXT_ZOOM,
+            DEFAULT_WEB_TEXT_ZOOM
+        )
 
     /**
      * 设置日夜间模式
      */
     fun setNightMode(nightMode: Boolean) =
-        SpHelper.putSpValue(SP_SETTINGS, APP.sInstance, KEY_NIGHT_MODE, nightMode)
+        SpHelper.putSpValue(
+            SP_SETTINGS, APP.sInstance,
+            KEY_NIGHT_MODE, nightMode)
 
     /**
      * 获取日夜间模式
      */
     fun getNightMode() =
-        SpHelper.getSpValue(SP_SETTINGS, APP.sInstance, KEY_NIGHT_MODE, false)
+        SpHelper.getSpValue(
+            SP_SETTINGS, APP.sInstance,
+            KEY_NIGHT_MODE, false)
 
 }

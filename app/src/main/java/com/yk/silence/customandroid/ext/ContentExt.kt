@@ -1,4 +1,4 @@
-package com.yk.silence.customandroid.util
+package com.yk.silence.customandroid.ext
 
 import android.content.ClipData
 import android.content.ClipboardManager
