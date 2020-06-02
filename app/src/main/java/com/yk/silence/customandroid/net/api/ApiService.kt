@@ -1,9 +1,6 @@
 package com.yk.silence.customandroid.net.api
 
-import com.yk.silence.customandroid.model.BannerModel
-import com.yk.silence.customandroid.model.FrequentlyModel
-import com.yk.silence.customandroid.model.HotWord
-import com.yk.silence.customandroid.model.UserModel
+import com.yk.silence.customandroid.model.*
 import retrofit2.http.*
 
 interface ApiService {
@@ -62,4 +59,10 @@ interface ApiService {
      */
     @POST("lg/uncollect_originId/{id}/json")
     suspend fun unCollect(@Path("id") id: Int): ApiResult<Any?>
+
+    /**
+     * 导航
+     */
+    @GET("navi/json")
+    suspend fun getNavigations(): ApiResult<List<NavigationModel>>
 }

@@ -8,7 +8,10 @@ import com.zhy.view.flowlayout.FlowLayout
 import com.zhy.view.flowlayout.TagAdapter
 import kotlinx.android.synthetic.main.item_nav_tag.view.*
 
-class TagAdapter(private val frequentlyList: List<FrequentlyModel>) :
+/**
+ * 标签适配器
+ */
+class CustomTagAdapter(private val frequentlyList: List<FrequentlyModel>) :
     TagAdapter<FrequentlyModel>(frequentlyList) {
 
     override fun getView(parent: FlowLayout?, position: Int, t: FrequentlyModel?): View {

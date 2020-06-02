@@ -4,10 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
-import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.Observer
 import com.yk.silence.customandroid.R
-import com.yk.silence.customandroid.base.BaseFragment
 import com.yk.silence.customandroid.base.BaseVMFragment
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.databinding.FragmentDiscoverBinding
@@ -21,10 +19,9 @@ import com.yk.silence.customandroid.widget.activity.MainActivity
 import com.yk.silence.customandroid.widget.activity.SearchActivity
 import com.yk.silence.customandroid.widget.activity.ShareActivity
 import com.yk.silence.customandroid.widget.adapter.HotWordAdapter
-import com.yk.silence.customandroid.widget.adapter.TagAdapter
+import com.yk.silence.customandroid.widget.adapter.CustomTagAdapter
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
-import com.youth.banner.transformer.BackgroundToForegroundTransformer
 
 
 class DiscoverFragment : BaseVMFragment<DiscoverViewModel, FragmentDiscoverBinding>(), ScrollToTop {
@@ -91,10 +88,9 @@ class DiscoverFragment : BaseVMFragment<DiscoverViewModel, FragmentDiscoverBindi
                 mBinding.txtHotTitle.isVisible = it.isNotEmpty()
             })
             mFrequentlyList.observe(viewLifecycleOwner, Observer {
-                mBinding.tflDiscover.adapter = TagAdapter(it)
+                mBinding.tflDiscover.adapter = CustomTagAdapter(it)
                 mBinding.tflDiscover.setOnTagClickListener { _, position, _ ->
                     val frequently = it[position]
-                    //TODO:跳转到详情页
                     ActivityManager.start(
                         DetailActivity::class.java,
                         mapOf(
@@ -147,7 +143,6 @@ class DiscoverFragment : BaseVMFragment<DiscoverViewModel, FragmentDiscoverBindi
             start()
             setOnBannerListener {
                 val banner = banners[it]
-                //TODO:跳转到详情页
                 ActivityManager.start(
                     DetailActivity::class.java,
                     mapOf(
