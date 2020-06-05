@@ -69,4 +69,11 @@
     <string name="network_not_available">网络似乎除了点问题&#8230;</string>
     <string name="everyone_search">大家都在搜</string>
     <string name="frequently_website">常用网址</string>
+    <string name="text_new">新</string>
+    <string name="anonymous">匿名</string>
+    <string name="load_failed">加载失败</string>
+    <string name="load_end">加载完成</string>
+    <string name="no_data">没有相关数据</string>
+    <string name="text_top">置顶</string>
+    <string name="text_fresh">新</string>
 </resources>

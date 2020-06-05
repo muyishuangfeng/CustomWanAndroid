@@ -12,4 +12,10 @@ class CollectRepository {
      * 取消收藏
      */
     suspend fun unCollect(id: Int) = RetrofitClient.apiService.unCollect(id).apiData()
+
+    /**
+     * 获取我的收藏列表
+     */
+    suspend fun getCollectList(page: Int) =
+        RetrofitClient.apiService.getCollectionList(page).apiData()
 }

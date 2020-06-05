@@ -17,7 +17,7 @@ class NavigationAdapter(layoutID: Int = R.layout.item_navigation) :
 
     override fun convert(helper: BaseViewHolder, item: NavigationModel?) {
         helper.itemView.txt_item_navigation_title.text = item?.name
-        helper.itemView.tag_item_navigation_flawLayout.adapter = ItemTagAdapter(item!!.articles)
+        helper.itemView.tag_item_navigation_flawLayout.adapter = ItemArticleTagAdapter(item!!.articles)
         helper.itemView.tag_item_navigation_flawLayout.setOnTagClickListener { _, position, _ ->
             onItemTagClickListener?.invoke(item.articles[position])
             true

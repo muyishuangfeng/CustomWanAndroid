@@ -65,4 +65,22 @@ interface ApiService {
      */
     @GET("navi/json")
     suspend fun getNavigations(): ApiResult<List<NavigationModel>>
+
+    /**
+     * 获取文章类别
+     */
+    @GET("tree/json")
+    suspend fun getArticleCategories(): ApiResult<MutableList<Category>>
+
+    @GET("lg/collect/list/{page}/json")
+    suspend fun getCollectionList(@Path("page") page: Int): ApiResult<Pagination<Article>>
+
+    /**
+     * 通过Cid获取文章
+     */
+    @GET("article/list/{page}/json")
+    suspend fun getArticleListByCid(
+        @Path("page") page: Int,
+        @Query("cid") cid: Int
+    ): ApiResult<Pagination<Article>>
 }
