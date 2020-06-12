@@ -6,14 +6,15 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.annotation.StyleRes
 import androidx.appcompat.app.AlertDialog
 import com.yk.silence.customandroid.R
 
 /**
  * 公共对话框
  */
-class CommonDialog(context: Context) :
-    AlertDialog(context), View.OnClickListener {
+class CommonDialog(context: Context, themeID: Int) :
+    AlertDialog(context, themeID), View.OnClickListener {
     private var mTitle: CharSequence? = null
     private var mContent: CharSequence? = null
     private var mListener: OnCommonCheckListener? = null
@@ -28,8 +29,9 @@ class CommonDialog(context: Context) :
         //初始化布局控件
         initView()
         //设置参数必须在show之后，不然没有效果
-        val params = getWindow()!!.attributes
-        getWindow()!!.attributes = params
+        val params = window.attributes
+        window.attributes.alpha=1.0f
+        window.attributes = params
         window.setWindowAnimations(R.style.updateDialogStyle) //添加动画
     }
 

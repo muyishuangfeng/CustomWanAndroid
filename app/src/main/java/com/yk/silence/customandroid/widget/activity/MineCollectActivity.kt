@@ -11,13 +11,13 @@ import com.yk.silence.customandroid.databinding.ActivityMineCollectBinding
 import com.yk.silence.customandroid.ui.CommonLoadMoreView
 import com.yk.silence.customandroid.util.EventBus
 import com.yk.silence.customandroid.viewmodel.collect.CollectViewModel
-import com.yk.silence.customandroid.widget.adapter.CollectArticleAdapter
+import com.yk.silence.customandroid.widget.adapter.ArticleAdapter
 import kotlinx.android.synthetic.main.include_reload.view.*
 
 class MineCollectActivity : BaseVMActivity<CollectViewModel, ActivityMineCollectBinding>() {
 
 
-    private lateinit var mAdapter: CollectArticleAdapter
+    private lateinit var mAdapter: ArticleAdapter
 
     override fun getLayoutID() = R.layout.activity_mine_collect
 
@@ -25,7 +25,7 @@ class MineCollectActivity : BaseVMActivity<CollectViewModel, ActivityMineCollect
 
     override fun initBinding(mBinding: ActivityMineCollectBinding) {
         super.initBinding(mBinding)
-        mAdapter = CollectArticleAdapter().apply {
+        mAdapter = ArticleAdapter().apply {
             setLoadMoreView(CommonLoadMoreView())
             bindToRecyclerView(mBinding.recyclerView)
             setOnItemClickListener { _, _, position ->

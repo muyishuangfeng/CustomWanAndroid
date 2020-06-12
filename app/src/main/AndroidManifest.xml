@@ -10,12 +10,12 @@
     <application
         android:name=".common.APP"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_android"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_android"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".widget.activity.MineCollectActivity"></activity>
+        <activity android:name=".widget.activity.MineCollectActivity"/>
         <activity android:name=".widget.activity.DetailActivity" />
         <activity android:name=".widget.activity.OpenSourceActivity" />
         <activity android:name=".widget.activity.SettingActivity" />
@@ -23,7 +23,6 @@
         <activity android:name=".widget.activity.MinePointActivity" />
         <activity android:name=".widget.activity.HistoryActivity" />
         <activity android:name=".widget.activity.AboutActivity" />
-        <activity android:name=".widget.activity.MineCollectActivity" />
         <activity android:name=".widget.activity.ShareActivity" />
         <activity android:name=".widget.activity.SearchActivity" />
         <activity android:name=".widget.activity.MainActivity" />

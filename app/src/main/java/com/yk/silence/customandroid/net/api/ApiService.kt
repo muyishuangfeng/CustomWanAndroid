@@ -83,4 +83,14 @@ interface ApiService {
         @Path("page") page: Int,
         @Query("cid") cid: Int
     ): ApiResult<Pagination<Article>>
+
+    /**
+     * 分享文章
+     */
+    @FormUrlEncoded
+    @POST("lg/user_article/add/json")
+    suspend fun shareArticle(
+        @Field("title") title: String,
+        @Field("link") link: String
+    ): ApiResult<Any>
 }

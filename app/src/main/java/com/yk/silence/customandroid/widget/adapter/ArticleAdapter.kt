@@ -10,7 +10,7 @@ import com.yk.silence.customandroid.ext.htmlToSpanned
 import com.yk.silence.customandroid.model.Article
 import kotlinx.android.synthetic.main.item_article.view.*
 
-class CollectArticleAdapter(layoutID: Int = R.layout.item_article) :
+class ArticleAdapter(layoutID: Int = R.layout.item_article) :
     BaseQuickAdapter<Article, BaseViewHolder>(layoutID) {
 
     override fun convert(helper: BaseViewHolder, item: Article?) {

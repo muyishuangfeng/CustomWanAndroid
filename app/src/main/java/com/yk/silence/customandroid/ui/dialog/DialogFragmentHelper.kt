@@ -17,6 +17,7 @@ object DialogFragmentHelper {
      * 加载中的弹出窗
      */
     private val mTheme: Int = R.style.CustomTheme_Dialog
+    private val mDialogTheme: Int = R.style.CustomThemeDialog
     private val TAG = DialogFragmentHelper::class.java.simpleName
     private val mProgressTag: String = "$TAG:progress"
 
@@ -66,7 +67,7 @@ object DialogFragmentHelper {
                 override fun getDialog(context: Context?): Dialog {
                     val mDialog =
                         CommonDialog(
-                            context!!)
+                            context!!,mTheme)
                     mDialog.setTitle(title)
                     mDialog.setContent(content)
                     mDialog.setOnCommonClickListener(object :

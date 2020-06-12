@@ -41,5 +41,33 @@
         <item name="colorControlHighlight">@color/colorRipple</item>
     </style>
 
+    <style name="CustomThemeDialog" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <!-- 去黑边
+        <item name="android:windowFrame">@null</item>
+        -->
+        <!-- 设置是否可滑动
+        <item name="android:windowIsFloating">false</item>
+        -->
+        <!-- 设置是否透明
+        <item name="android:windowIsTranslucent">true</item>
+         -->
+        <!-- 无标题
+        <item name="android:windowNoTitle">true</item>
+        -->
+        <!-- 背景
+        <item name="android:background">@android:color/transparent</item>
+        -->
+        <!-- 窗口背景
+        <item name="android:windowBackground">@android:color/transparent</item>
+        -->
+        <!-- 是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分不消失
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        -->
+        <!-- 没有动画
+        <item name="android:windowAnimationStyle">@style/updateDialogStyle</item>
+        -->
+    </style>
 
 </resources>

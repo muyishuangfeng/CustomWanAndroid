@@ -76,4 +76,19 @@
     <string name="no_data">没有相关数据</string>
     <string name="text_top">置顶</string>
     <string name="text_fresh">新</string>
+    <string name="text_history">历时记录</string>
+    <string name="confirm_delete_history">确认删除历史记录</string>
+    <string name="submit">提交</string>
+    <string name="share_article">分享文章</string>
+    <string name="title">标题</string>
+    <string name="link">链接</string>
+    <string name="share_people">分享人</string>
+    <string name="tips">温馨提示</string>
+    <string name="title_hint">请输入您要分享的文章标题，100字以内。</string>
+    <string name="link_hint">请输入您要分享的文章链接。</string>
+    <string name="tips_content">1.只要是任何好文都可以分享哈，并不一定要是原创！投递的文章会进入广场tab；\n2.CSDN、掘金、简书等官方博客站点会直接通过，不需要审核；\n3.其他个人站点会进入审核阶段，不要投递任何无效链接，测试的请尽快删除，否则可能会对你的账号产生一定影响;\n4.目前处于测试阶段，如果你发现500等错误，可以向我提交日志，让我们一起使网站变得更好；\n5.由于本站只有我一个人开发与维护，会尽力保证24小时内审核，当然有可能哪天太累，会延期，请保持佛系&#8230;</string>
+    <string name="share_article_success">文章分享成功</string>
+    <string name="sharing_article">正在分享文章&#8230;</string>
+    <string name="title_toast">文章标题不能为空</string>
+    <string name="link_toast">文章链接不能为空</string>
 </resources>
