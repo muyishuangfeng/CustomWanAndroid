@@ -93,4 +93,15 @@ interface ApiService {
         @Field("title") title: String,
         @Field("link") link: String
     ): ApiResult<Any>
+
+    /**
+     * 搜索文章
+     */
+    @FormUrlEncoded
+    @POST("article/query/{page}/json")
+    suspend fun search(
+        @Field("k") keywords: String,
+        @Path("page") page: Int
+    ): ApiResult<Pagination<Article>>
+
 }

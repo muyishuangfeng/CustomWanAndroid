@@ -1,4 +1,4 @@
-package com.yk.silence.customandroid.util
+package com.yk.silence.customandroid.util.store
 
 import com.yk.silence.customandroid.common.APP
 import com.yk.silence.customandroid.ext.SpHelper

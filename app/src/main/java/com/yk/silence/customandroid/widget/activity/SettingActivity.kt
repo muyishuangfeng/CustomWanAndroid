@@ -8,7 +8,7 @@ import com.yk.silence.customandroid.R
 import com.yk.silence.customandroid.base.BaseVMActivity
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.databinding.ActivitySettingBinding
-import com.yk.silence.customandroid.util.SettingsStore
+import com.yk.silence.customandroid.util.store.SettingsStore
 import com.yk.silence.customandroid.ui.dialog.CommonDialog
 import com.yk.silence.customandroid.ui.dialog.DialogFragmentHelper
 import com.yk.silence.customandroid.ui.dialog.FontSizeDialog

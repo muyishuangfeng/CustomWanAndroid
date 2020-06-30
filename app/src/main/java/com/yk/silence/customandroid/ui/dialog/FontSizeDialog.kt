@@ -6,7 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.yk.silence.customandroid.R
-import com.yk.silence.customandroid.util.SettingsStore
+import com.yk.silence.customandroid.util.store.SettingsStore
 import com.yk.silence.customandroid.widget.adapter.SeekBarChangeListenerAdapter
 import kotlinx.android.synthetic.main.dialog_font_setting_layout.*
 

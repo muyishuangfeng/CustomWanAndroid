@@ -91,4 +91,6 @@
     <string name="sharing_article">正在分享文章&#8230;</string>
     <string name="title_toast">文章标题不能为空</string>
     <string name="link_toast">文章链接不能为空</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
 </resources>

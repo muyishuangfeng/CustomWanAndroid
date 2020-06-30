@@ -25,7 +25,7 @@ import com.yk.silence.customandroid.ext.whiteHostList
 import com.yk.silence.customandroid.model.Article
 import com.yk.silence.customandroid.util.DayOrNightUtil
 import com.yk.silence.customandroid.util.EventBus
-import com.yk.silence.customandroid.util.SettingsStore
+import com.yk.silence.customandroid.util.store.SettingsStore
 import com.yk.silence.customandroid.viewmodel.detail.DetailViewModel
 
 class DetailActivity : BaseVMActivity<DetailViewModel, ActivityDetailBinding>() {
