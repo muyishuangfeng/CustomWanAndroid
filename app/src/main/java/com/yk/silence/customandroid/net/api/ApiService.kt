@@ -104,4 +104,57 @@ interface ApiService {
         @Path("page") page: Int
     ): ApiResult<Pagination<Article>>
 
+    /**
+     * 获取热门文章集合
+     */
+    @GET("/article/top/json")
+    suspend fun getTopArticleList(): ApiResult<List<Article>>
+
+    /**
+     * 获取文章集合
+     */
+    @GET("/article/list/{page}/json")
+    suspend fun getArticleList(@Path("page") page: Int): ApiResult<Pagination<Article>>
+
+    /**
+     * 获取最新的项目
+     */
+    @GET("/article/listproject/{page}/json")
+    suspend fun getProjectList(@Path("page") page: Int): ApiResult<Pagination<Article>>
+
+    /**
+     * 获取项目分类
+     */
+    @GET("project/tree/json")
+    suspend fun getProjectCategories(): ApiResult<MutableList<Category>>
+
+    /**
+     * 获取项目分类数据
+     */
+    @GET("project/list/{page}/json")
+    suspend fun getProjectListByCid(
+        @Path("page") page: Int,
+        @Query("cid") cid: Int
+    ): ApiResult<Pagination<Article>>
+
+    /**
+     * 获取用户文章集合
+     */
+    @GET("/user_article/list/{page}/json")
+    suspend fun getUserArticleList(@Path("page") page: Int): ApiResult<Pagination<Article>>
+
+    /**
+     * 公众号分类
+     */
+    @GET("wxarticle/chapters/json")
+    suspend fun getWechatCategories(): ApiResult<MutableList<Category>>
+
+    /**
+     * 获取公众号文章集合
+     */
+    @GET("wxarticle/list/{id}/{page}/json")
+    suspend fun getWechatArticleList(
+        @Path("page") page: Int,
+        @Path("id") id: Int
+    ): ApiResult<Pagination<Article>>
 }

@@ -67,6 +67,8 @@ class SearchResultFragment :
     }
 
 
+
+
     override fun observe() {
         super.observe()
         mViewModel.run {
