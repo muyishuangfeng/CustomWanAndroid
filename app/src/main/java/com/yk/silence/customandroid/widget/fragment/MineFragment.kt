@@ -9,6 +9,7 @@ import com.yk.silence.customandroid.base.BaseVMFragment
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.common.Constants
 import com.yk.silence.customandroid.databinding.FragmentMineBinding
+import com.yk.silence.customandroid.model.Article
 import com.yk.silence.customandroid.util.EventBus
 import com.yk.silence.customandroid.viewmodel.mine.MineViewModel
 import com.yk.silence.customandroid.widget.activity.*
@@ -26,9 +27,15 @@ class MineFragment : BaseVMFragment<MineViewModel, FragmentMineBinding>() {
     override fun initBinding(mBinding: FragmentMineBinding) {
         super.initBinding(mBinding)
         mBinding.lytMineAbout.setOnClickListener {
-            checkLogin {
-                ActivityManager.start(AboutActivity::class.java)
-            }
+            ActivityManager.start(
+                DetailActivity::class.java,
+                mapOf(
+                    DetailActivity.PARAM_ARTICLE to Article(
+                        title = getString(R.string.my_about_author),
+                        link = "https://github.com/muyishuangfeng"
+                    )
+                )
+            )
         }
         mBinding.lytMineCollect.setOnClickListener {
             checkLogin {
@@ -41,7 +48,9 @@ class MineFragment : BaseVMFragment<MineViewModel, FragmentMineBinding>() {
             }
         }
         mBinding.lytMineOpenSource.setOnClickListener {
-            checkLogin()
+            checkLogin{
+                ActivityManager.start(OpenSourceActivity::class.java)
+            }
         }
         mBinding.lytMinePoint.setOnClickListener {
             checkLogin {

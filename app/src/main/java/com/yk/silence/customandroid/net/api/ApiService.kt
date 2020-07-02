@@ -169,4 +169,10 @@ interface ApiService {
      */
     @GET("lg/coin/list/{page}/json")
     suspend fun getPointsRecord(@Path("page") page: Int): ApiResult<Pagination<PointRecord>>
+
+    /**
+     * 获取积分排行
+     */
+    @GET("coin/rank/{page}/json")
+    suspend fun getPointsRank(@Path("page") page: Int): ApiResult<Pagination<PointRank>>
 }

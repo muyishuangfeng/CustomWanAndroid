@@ -79,7 +79,6 @@ class DetailActivity : BaseVMActivity<DetailViewModel, ActivityDetailBinding>() 
                 }
 
                 override fun onConsoleMessage(consoleMessage: ConsoleMessage?): Boolean {
-                    Log.d("WanAandroidWebView", "${consoleMessage?.message()}")
                     return super.onConsoleMessage(consoleMessage)
                 }
             })

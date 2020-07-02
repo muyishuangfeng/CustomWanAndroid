@@ -1,13 +1,13 @@
 package com.yk.silence.customandroid.widget.fragment
 
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yk.silence.customandroid.R
-import com.yk.silence.customandroid.base.BaseFragment
 import com.yk.silence.customandroid.base.BaseVMFragment
 import com.yk.silence.customandroid.common.ActivityManager
 import com.yk.silence.customandroid.databinding.FragmentNavigationBinding
@@ -45,6 +45,7 @@ class NavigationFragment : BaseVMFragment<NavigationViewModel, FragmentNavigatio
         mAdapter = NavigationAdapter(R.layout.item_navigation).apply {
             bindToRecyclerView(mBinding.rlvNavigation)
             onItemTagClickListener = {
+                Log.e("tag",it.title+"==========="+it.link)
                 ActivityManager.start(
                     DetailActivity::class.java,
                     mapOf(
