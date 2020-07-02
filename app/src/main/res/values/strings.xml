@@ -93,4 +93,5 @@
     <string name="link_toast">文章链接不能为空</string>
     <string name="hot_search">热门搜索</string>
     <string name="search_history">搜索历史</string>
+    <string name="level_rank">等级: %1$d\t\t\t排名: %2$d</string>
 </resources>

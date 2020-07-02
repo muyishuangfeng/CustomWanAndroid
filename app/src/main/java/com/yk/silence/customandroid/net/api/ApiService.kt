@@ -157,4 +157,16 @@ interface ApiService {
         @Path("page") page: Int,
         @Path("id") id: Int
     ): ApiResult<Pagination<Article>>
+
+    /**
+     * 获取排行
+     */
+    @GET("lg/coin/userinfo/json")
+    suspend fun getPoints(): ApiResult<PointRank>
+
+    /**
+     * 获取积分记录
+     */
+    @GET("lg/coin/list/{page}/json")
+    suspend fun getPointsRecord(@Path("page") page: Int): ApiResult<Pagination<PointRecord>>
 }
